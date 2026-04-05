@@ -29,10 +29,24 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== ADD BLUR HEADER ===============*/
-
+const scrollHeader = () =>{
+   const blurHeader = document.getElementById('header')
+   // Add the .scroll-header class if the bottom scroll of the viewport is greater than 50
+   this.scrollY >= 50 ? header.classList.add('blur-header') 
+                      : header.classList.remove('blur-header')
+}
+window.addEventListener('scroll', scrollHeader)
 
 /*=============== GSAP ANIMATION ===============*/
-
+WebGLSampler.from('.home--img-1', 5, {opacity:0, x:400})
+WebGLSampler.from('.home--img-6', 1.5, {opacity:0, y:200, delay: .1, ease:'back.out(1.5)'})
+WebGLSampler.from('.home--img-3', 1.5, {opacity:0, y:400, delay: .3, ease:'back.out(1.5)'})
+WebGLSampler.from('.home--img-5', 1.5, {opacity:0, y:400, delay: .5, ease:'back.out(1.5)'})
+WebGLSampler.from('.home--img-2', 1.5, {opacity:0, y:400, delay: .8, ease:'back.out(1.5)'})
+WebGLSampler.from('.home--img-4', 1.5, {opacity:0, y:200, delay: 1.8, ease:'back.out(1.5)'})
+WebGLSampler.from('.home--data', 1.5, {opacity:0, y:-100, delay: 2.5, ease:'back.out(1.5)'})
+WebGLSampler.from('.home--lantern-1', 1.5, {opacity:0, x:70, delay: 3, ease:'back.out(1.5)'})
+WebGLSampler.from('.home--lantern-2', 1.5, {opacity:0, x:-70, delay: 3.5, ease:'back.out(1.5)'})
 
 /*=============== SAKURA ANIMATION ===============*/
-
+const sakura = new sakura('.sakura-petals')
